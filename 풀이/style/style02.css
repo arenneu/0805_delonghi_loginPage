@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@import url(style_reset.css);
+
+/* div#headerFrame 시작 */
+
+div#headerFrame {
+  background-color: #0c2645;
+}
+
+div#headerFrame header#header {
+  width: 1230px;
+  height: 110px;
+  margin: 0 auto;
+}
+
+/* div#headerFrame 끝 */
+/* div#wrap 시작 */
+
+div#wrap {
+  width: 1230px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* div#wrap 끝 */
+/* div#footerFrame 시작 */
+
+div#footerFrame {
+  height: 200px;
+  /* 임시설정 */
+  background-color: #0c2645;
+}
+
+/* div#footerFrame 끝 */

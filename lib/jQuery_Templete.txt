@@ -1,0 +1,13 @@
+/* eslint-disable */
+
+$(function(){
+
+});
+
+
+
+/* eslint-disable */
+
+$( document ).ready(function(){
+	// Your code here
+});
