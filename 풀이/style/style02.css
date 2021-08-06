@@ -7,17 +7,136 @@ div#headerFrame {
   background-color: #0c2645;
 }
 
+/* header#header 시작 */
+
 div#headerFrame header#header {
-  width: 1230px;
+  width: 1300px;
   height: 110px;
   margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
 }
 
+/* div#headerLogo 시작 */
+
+header#header div#headerLogo {
+  width: 320px;
+  height: 110px;
+  line-height: 110px;
+  text-align: center;
+  /* border: 1px solid #fff; */
+}
+
+/* div#headerLogo 끝 */
+/* nav#gnb 시작 */
+
+header#header nav#gnb {
+  width: 600px;
+  height: 110px;
+  /* border: 1px solid #ccc; */
+  margin: 0 10px;;
+}
+
+header#header ul#mainMenu{
+  height: 110px;
+  /* border: 1px solid #0ff; */
+  /* position: relative; */
+}
+
+header#header nav#gnb li.mainLi {
+  flex: 1;
+  text-align: center;
+}
+
+header#header nav#gnb li.mainLi > a {
+  height: 110px;
+  line-height: 110px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+
+  /* border: 1px solid #f88; */
+}
+
+#header #gnb li.mainLi:nth-child(3) ul.subMenu {
+  transform: translate(-148px);
+}
+
+#header #gnb li.mainLi:nth-child(4) ul.subMenu {
+  transform: translate(-295px);
+  }
+
+/* ul.subMenu 시작 */
+
+#header ul.subMenu {
+  /* border: 1px solid #000; */
+  /* 디버깅대상 시작 */
+  display: flex;
+  display: none;
+  /* 디버깅대상 끝 */
+  
+  position: absolute;
+  z-index: 1;
+}
+
+#header ul.subMenu li {
+  border: 1px solid #000;
+}
+
+#gnb li.subLi a {
+  width: 210px;
+  height: 90px;
+  line-height: 90px;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  /* border: 1px solid #000; */
+}
+
+/* 하이라이트 효과 시작 */
+#gnb li.subLi a:hover {
+  color: #3289e8;
+}
+
+#header #gnb li.mainLi:hover > a {
+  color: #3289e8;
+  border-bottom: 4px solid #3289e8;
+}
+
+/* 하이라이트 효과 끝 */
+/* ul.subMenu 끝 */
+/* nav#gnb 끝 */
+/* nav#headerLnb 시작 */
+
+nav#headerLnb {
+  width: 290px;
+  border: 1px solid #fff;
+}
+
+/* nav#headerLnb 끝 */
+/* header#header 끝 */
 /* div#headerFrame 끝 */
+/* div#subMenu 시작 */
+
+#subMenuBG {
+  background-color: #fff;
+  width: 100%;
+  height: 160px;
+  border: 1px solid #f08;
+  
+  display: none ;
+  position: absolute;
+}
+
+#subMenuBG {
+
+}
+/* div#subMenu 끝 */
 /* div#wrap 시작 */
 
 div#wrap {
-  width: 1230px;
+  width: 1300px;
   height: 300px;
   margin: 0 auto;
 }

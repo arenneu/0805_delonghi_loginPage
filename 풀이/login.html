@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,16 +10,71 @@
     <script src="lib/jquery-3.6.0.min.js"></script>
     <script src="script/script.js"></script>
 </head>
+
 <body>
     <div id="headerFrame">
-        <header id="header">
-
+        <header id="header" class="flexContainer">
+            <div id="headerLogo">
+                <a href="#"><img src="images/header_logo.png" alt="헤더로고이미지" width="236" height="41"></a>
+            </div>
+            <!-- div#headerLogo -->
+            <nav id="gnb">
+                <ul id="mainMenu" class="flexContainer">
+                    <li class="mainLi">
+                        <a href="#">클럽서비스안내</a>
+                        <ul class="subMenu">
+                            <li class="subLi"><a href="#">드롱기 VIP 클럽 소개</a></li>
+                            <li class="subLi"><a href="#">클럽 혜택 안내</a></li>
+                            <li class="subLi"><a href="#">드롱기 홍보대사 특별선물</a></li>
+                            <li class="subLi"><a href="#">드롱기 컨셉 스토어</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#">특별구매ㆍ이벤트</a>
+                        <ul class="subMenu">
+                            <li class="subLi"><a href="#">이달의 제품</a></li>
+                            <li class="subLi"><a href="#">이벤트</a></li>
+                            <li class="subLi"><a href="#">이벤트 당첨 발표</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#">마이페이지</a>
+                        <ul class="subMenu">
+                            <li class="subLi"><a href="#">멤버십 카드보기</a></li>
+                            <li class="subLi"><a href="#">추천 지인 정보</a></li>
+                            <li class="subLi"><a href="#">개인정보 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#">고객센터</a>
+                        <ul class="subMenu">
+                            <li class="subLi"><a href="#">뉴스</a></li>
+                            <li class="subLi"><a href="#">자주하는 질문</a></li>
+                            <li class="subLi"><a href="#">1:1 문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- nav#gnb -->
+            <nav id="headerLnb">
+                <ul class="flexContainer">
+                    <li><a href="#"><img src="images/icon_login.png" width="12" height="17" alt="로그인"></a></li>
+                    <li><a href="#"><img src="images/icon_cart.png" width="21" height="17" alt="장바구니"></a></li>
+                    <li><a href="#"><img src="images/icon_join.png" width="15" height="15" alt="회원가입"></a></li>
+                    <li><a href="#"><img src="images/icon_shipping.png" width="27" height="18" alt="배송조회"></a></li>
+                </ul>
+            </nav>
+            <!-- nav#headerLnb -->
         </header>
         <!-- header#header -->
     </div>
     <!-- div#headerFrame -->
-    <div id="wrap">
 
+    <div id="subMenuBG"></div>
+    <!-- div#subMenuBG -->
+
+    <div id="wrap">
+        로그인
     </div>
     <!-- div#wrap -->
     <div id="footerFrame">
@@ -29,4 +85,5 @@
     </div>
     <!-- div#footerFrame -->
 </body>
+
 </html>
