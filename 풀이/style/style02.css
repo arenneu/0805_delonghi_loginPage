@@ -5,6 +5,11 @@
 
 div#headerFrame {
   background-color: #0c2645;
+  width: 100%;
+  height: 110px;
+  margin-bottom: 110px;
+  position: fixed;
+  z-index: 10;
 }
 
 /* header#header 시작 */
@@ -13,6 +18,7 @@ div#headerFrame header#header {
   width: 1300px;
   height: 110px;
   margin: 0 auto;
+
   align-items: center;
   justify-content: space-between;
 }
@@ -21,8 +27,6 @@ div#headerFrame header#header {
 
 header#header div#headerLogo {
   width: 320px;
-  height: 110px;
-  line-height: 110px;
   text-align: center;
   /* border: 1px solid #fff; */
 }
@@ -32,12 +36,11 @@ header#header div#headerLogo {
 
 header#header nav#gnb {
   width: 600px;
-  height: 110px;
   /* border: 1px solid #ccc; */
-  margin: 0 10px;;
+  margin: 0 10px;
 }
 
-header#header ul#mainMenu{
+header#header ul#mainMenu {
   height: 110px;
   /* border: 1px solid #0ff; */
   /* position: relative; */
@@ -59,95 +62,453 @@ header#header nav#gnb li.mainLi > a {
   /* border: 1px solid #f88; */
 }
 
-#header #gnb li.mainLi:nth-child(3) ul.subMenu {
-  transform: translate(-148px);
+/* #header #gnb li.mainLi:nth-child(3) ul.subMenu {
+  transform: translate(-30%);
 }
 
 #header #gnb li.mainLi:nth-child(4) ul.subMenu {
-  transform: translate(-295px);
-  }
+  transform: translate(-60%);
+} */
 
 /* ul.subMenu 시작 */
-
-#header ul.subMenu {
-  /* border: 1px solid #000; */
-  /* 디버깅대상 시작 */
-  display: flex;
-  display: none;
-  /* 디버깅대상 끝 */
-  
+#gnb ul.subMenu {
   position: absolute;
   z-index: 1;
-}
 
-#header ul.subMenu li {
-  border: 1px solid #000;
+  /* 디버깅대상 시작 */
+  display: flex;
+  /* display: none; */
+  /* 디버깅대상 끝, 코드 중복현상(코드가 꼬임)
+  -> 다른 레이아웃을 적용하거나 JS, JQuery에서 CSS 레이아웃 작업 */
+
+  /* border: 1px solid #000; */
 }
 
 #gnb li.subLi a {
-  width: 210px;
-  height: 90px;
-  line-height: 90px;
-  font-size: 15px;
+  color: #000;
+  width: 190px;
+  font-size: 16px;
   font-weight: bold;
   display: inline-block;
+  padding: 0 2px;
   /* border: 1px solid #000; */
 }
 
-/* 하이라이트 효과 시작 */
-#gnb li.subLi a:hover {
-  color: #3289e8;
+/* #header ul.subMenu li {
+  border: 1px solid #000;
+} */
+
+#gnb li.subLi > a {
+  height: 60px;
+  line-height: 60px;
 }
+
+#gnb li.mainLi:not(:first-child) ul.subMenu {
+  left: 38.3%;
+}
+
+#gnb ul.subMenu2Depth li {
+  line-height: 28px;
+  text-indent: 29px;
+  text-align: left;
+}
+
+#gnb ul.subMenu2Depth li a {
+  color: #888;
+  font-size: 14px;
+}
+
+/* ul.subMenu 끝 */
+/* 하이라이트 효과 시작 */
 
 #header #gnb li.mainLi:hover > a {
   color: #3289e8;
   border-bottom: 4px solid #3289e8;
 }
 
+#gnb li.subLi a:hover {
+  color: #3289e8;
+}
+
 /* 하이라이트 효과 끝 */
-/* ul.subMenu 끝 */
 /* nav#gnb 끝 */
+
 /* nav#headerLnb 시작 */
 
-nav#headerLnb {
+#header nav#headerLnb {
   width: 290px;
-  border: 1px solid #fff;
+  padding: 0 10px;
+  /* border: 1px solid #fff; */
+}
+
+#header nav#headerLnb ul {
+  height: 110px;
+  justify-content: space-around;
+}
+
+#header nav#headerLnb li {
+  text-align: center;
+  flex: 1;
+}
+
+#header nav#headerLnb li a {
+  height: 68px;
+  line-height: 110px;
+  display: inline-block;
+  /* border: 1px solid #f8f; */
+}
+
+#header nav#headerLnb li span {
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  padding: 10px 0;
+  border-bottom: 3px solid #08f;
+  display: inline-block;
+  visibility: hidden;
 }
 
 /* nav#headerLnb 끝 */
 /* header#header 끝 */
 /* div#headerFrame 끝 */
+
 /* div#subMenu 시작 */
 
 #subMenuBG {
   background-color: #fff;
   width: 100%;
   height: 160px;
-  border: 1px solid #f08;
-  
-  display: none ;
-  position: absolute;
+  border-bottom: 1px solid #ccc;
+
+  display: none;
+  position: fixed;
+  top: 110px;
+  z-index: 2;
 }
 
-#subMenuBG {
-
-}
 /* div#subMenu 끝 */
 /* div#wrap 시작 */
 
 div#wrap {
-  width: 1300px;
-  height: 300px;
+  width: 1000px;
+  padding-top: 110px;
+  /* #headerFrame의 Position:fixed 적용에 필요함 */
+  margin: 0 auto;
+  margin-bottom: 300px;
+}
+
+/* div#locator 시작 */
+
+div#locator {
+  padding: 10px 20px;
+  margin-bottom: 4px;
+}
+
+#locator > * {
+  margin-right: 20px;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* div#locator 끝 */
+/* header#loginTitle 시작 */
+
+header#loginTitle {
+  padding: 16px;
+  margin: 14px 0 30px;
+  /* border: 1px solid #000; */
+}
+
+#loginTitle h1 {
+  text-align: center;
+  font-size: 50px;
+  /* border: 1px solid #f88; */
+}
+
+/* header#loginTitle 끝 */
+
+#wrap hr {
+  border-color: #000;
+}
+
+/* form#loginForm 시작 */
+
+form#loginForm {
+  width: 740px;
+  /* border: 1px solid #aaa; */
+  padding: 10px;
   margin: 0 auto;
 }
 
+#loginForm #loginSubtitle {
+  margin-top: 40px;
+}
+
+#loginForm #loginSubtitle h2 {
+  color: #777;
+  text-align: center;
+  font-weight: normal;
+  font-size: 22px;
+  padding: 20px;
+}
+
+/* form#loginForm 끝 */
+/* div#multiTabArea 시작 */
+
+/* 초기상태 버튼스타일 */
+div#multiTabArea button {
+  font-size: 15px;
+  padding: 22px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  flex: 1;
+}
+
+/* 클릭했을 때의 버튼스타일 */
+div#multiTabArea button:first-child {
+  color: #3289e8;
+  border: 1px solid #3289e8;
+  border-bottom-color: #fff;
+}
+
+/* 클릭하지 않을 때의 버튼스타일 */
+div#multiTabArea button:last-child {
+  border-left: none;
+  border-bottom-color: 1px solid #3289e8;
+}
+
+/* div#multiTabArea 끝 */
+
+/* table#loginTbl 시작 */
+table#loginTbl {
+  width: 100%;
+  /* border: 1px solid #000; */
+  margin: 34px 0;
+  border-spacing: 10px;
+}
+
+#loginTbl caption {
+  color: #666;
+  font-size: 15px;
+  text-align: left;
+  caption-side: bottom;
+  margin: 8px 0;
+}
+
+#loginTbl caption::before {
+  content: "\2022";
+}
+
+#loginTbl input {
+  width: 450px;
+  font-size: 16px;
+  padding: 16px;
+  border: 1px solid #bbb;
+}
+
+#loginTbl input:focus {
+  border: 1px solid #fff;
+  outline: 1px solid #08f;
+}
+
+#loginTbl input::placeholder {
+  color: #999;
+}
+
+#loginTbl td:first-child {
+  width: 456px;
+}
+
+#loginTbl button {
+  font-size: 19px;
+  font-weight: bold;
+  width: 240px;
+  height: 120px;
+  color: #fff;
+  border: 1px solid #3289e8;
+  background-color: #3289e8;
+  transform: translateX(6px);
+  cursor: pointer;
+}
+
+#loginTbl button:hover {
+  background-color: #328ae8cb;
+}
+
+/* table#loginTbl 끝 */
+/* div#accountLink 시작 */
+
+div#accountLink {
+  /* border: 1px solid #000; */
+  cursor: pointer;
+  align-items: center;
+}
+
+#accountLink > div:nth-child(2n + 1) {
+  text-align: center;
+  flex: 1;
+}
+
+#accountLink > div:nth-child(2n) {
+  width: 1px;
+  height: 20px;
+}
+
+div#accountLink div.separateLine {
+  width: 1px;
+  height: 20px;
+  background-image: url(../images/line.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* span.accountLinkIcon 시작 */
+
+div#accountLink > div:nth-child(2n + 1) {
+  justify-content: center;
+  align-items: center;
+}
+
+div#accountLink span.accountLinkIcon {
+  width: 70px;
+  height: 70px;
+  /* border: 1px solid #000; */
+  border-radius: 35px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* span.accountLinkIcon 끝 */
+
+/* 회원가입 링크 시작 */
+/* 계정작업 관련 링크 리팩토리 작업 시작 */
+
+#accountLink span:first-child {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#accountLink > div:hover > span:first-child {
+  background-color: #3289e8;
+}
+
+#accountLink > div:hover > span:last-child {
+  color: #3289e8;
+}
+
+/* 계정작업 관련 링크 리팩토리 작업 끝 */
+
+#accountLink span#join {
+  background-image: url(../images/icon_join02.png);
+  background-size: 35px 27px;
+}
+
+#accountLink div#joinDiv:hover span#join {
+  background-image: url(../images/icon_join02_on.png);
+}
+
+/* 회원가입 링크 끝 */
+
+/* 아이디찾기 링크 시작 */
+
+#accountLink span#findID {
+  background-image: url(../images/icon_findID.png);
+  background-size: 34px 27px;
+}
+
+#accountLink div#findIdDiv:hover span#findID {
+  background-image: url(../images/icon_findID_on.png);
+}
+
+/* 아이디찾기 링크 끝 */
+/* 비밀번호찾기 링크 시작 */
+
+#accountLink span#findPW {
+  background-image: url(../images/icon_findPW.png);
+  background-size: 31px 28px;
+}
+
+#accountLink div#findPwDiv:hover span#findPW {
+  background-image: url(../images/icon_findPW_on.png);
+}
+
+/* 비밀번호찾기 링크 끝 */
+/* div#accountLink 끝 */
 /* div#wrap 끝 */
+
 /* div#footerFrame 시작 */
 
 div#footerFrame {
-  height: 200px;
-  /* 임시설정 */
   background-color: #0c2645;
 }
+/* footer#footer 시작 */
 
+#footerFrame footer#footer {
+  margin: 0px auto;
+  padding: 40px 0 150px;
+}
+
+#footerFrame nav#footerLnb,
+#footerFrame div#footerLogo,
+#footerFrame div#companyArea {
+  margin: 0 auto;
+  text-align: center;
+  width: 1000px;
+}
+
+/* div#footerLnb 시작 */
+
+#footerFrame nav#footerLnb ul {
+  justify-content: center;
+}
+
+#footerFrame nav#footerLnb ul li {
+  margin: 0 40px;
+  list-style-type: disc;
+}
+
+#footerFrame nav#footerLnb li::marker {
+  color: #81a1f9;
+}
+
+#footerFrame nav#footerLnb a {
+  color: #fff;
+}
+/* div#footerLnb 끝 */
+
+#footerFrame hr {
+  border: none;
+  border-bottom: 1px solid #253c58;
+  margin: 22px 0;
+}
+
+/* div#footerLogo 시작 */
+
+#footerFrame div#footerLogo {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* div#footerLogo 끝 */
+/* div#companyArea 시작 */
+
+#footerFrame div#companyArea span {
+  color: #67778a;
+  font-size: 13px;
+  font-style: normal;
+  margin: 0 10px;
+}
+
+#footerFrame div#companyInfo {
+  justify-content: center;
+}
+
+#footerFrame address {
+  margin: 10px 0;
+}
+
+/* div#companyArea 끝 */
+/* footer#footer 끝 */
 /* div#footerFrame 끝 */

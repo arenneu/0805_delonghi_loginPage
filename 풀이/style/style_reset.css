@@ -42,9 +42,9 @@ img {
   display: flex;
 }
 
-div#wrap {
-  border: 1px solid #000;
-}
+/* div#wrap {
+  border: 1px solid #f00;
+} */
 
 /* div#headerFrame {
   border: 1px solid #000;
@@ -58,12 +58,12 @@ div#wrap {
   border: 1px solid #000;
 } */
 
-div#footerFrame {
-  border: 1px solid #000;
-}
+/* div#footerFrame {
+  border: 1px solid #0f0;
+} */
 
-footer#footer {
-  border: 1px solid #aaa;
-}
+/* footer#footer {
+  border: 1px solid #fff;
+} */
 
 /* reset 끝 */
